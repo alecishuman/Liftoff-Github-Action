@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: log commit message
-      run: echo '${{ toJson{github.event}}}' | jq
+      run: echo '${{ toJson{github.event}}' | jq
       shell: bash
