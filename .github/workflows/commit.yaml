@@ -1,12 +1,12 @@
 name: Commit Message
 
 on: 
-  commit:
+  branch_protection_rule
 
 jobs:
   print-commit-message:
-    run-on: ubuntu-latest:
+    runs-on: ubuntu-latest
     steps:
-    - name: "log commit message"
+    - name: log commit message
       run: echo '${{ toJson{github.event}}}' | jq
       shell: bash
