@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: log commit message
-      run: echo '${{ toJSON{github.event.commits} }}'
+      run: echo '${{ toJSON(github.event.commits) }}'
       shell: bash
